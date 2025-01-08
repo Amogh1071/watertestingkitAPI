@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+    <style>
+        /* Style for the div container */
+        #imageContainer {
+            width: 800px; /* Set the desired width */
+            height: 600px; /* Set the desired height */
+            border: 2px solid black; /* Optional border for better visibility */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Ensure the image doesn't overflow the container */
+            margin-top: 20px;
+        }
+
+        #processedImage {
+            max-width: 100%; /* Ensure the image fits the container width */
+            max-height: 100%; /* Ensure the image fits the container height */
+            object-fit: contain; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload an Image</h1>
+
+    <form>
+        <input type="file" id="fileInput" accept="image/*">
+        <button id="uploadButton">Upload and Process</button>
+    </form>
+
+    <!-- Div container for the resized image -->
+    <div id="imageContainer">
+        <img id="processedImage" alt="Processed Image">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
